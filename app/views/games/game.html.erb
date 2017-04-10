@@ -1,0 +1,12 @@
+<h1>This is a game</h1>
+
+<%= @grid %>
+
+<p>What is your best shot?</p>
+
+<form action="/score">
+  Last name:<br>
+  <input type="text" name="attempt" value="guess"><br />
+  <input type="hidden" name="grid" value = <%= @grid.delete(' ') %> >
+  <input type="submit" value="Submit">
+</form>
